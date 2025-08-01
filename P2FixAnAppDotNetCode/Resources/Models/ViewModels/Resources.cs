@@ -5,7 +5,7 @@ using System.Globalization;
 
 namespace P2FixAnAppDotNetCode.Resources.Models.ViewModels
 {
-    public static class Order
+    public class Order
     {
         private static ResourceManager resourceManager = new ResourceManager("P2FixAnAppDotNetCode.Resources.Models.ViewModels.Order", Assembly.GetExecutingAssembly());
         private static CultureInfo resourceCulture;
@@ -36,6 +36,13 @@ namespace P2FixAnAppDotNetCode.Resources.Models.ViewModels
             get
             {
                 return resourceManager.GetString("ErrorMissingCountry", resourceCulture);
+            }
+        }
+        public static string ErrorMissingZip
+        {
+            get
+            {
+                return resourceManager.GetString("ErrorMissingZip", resourceCulture);
             }
         }
     }
